@@ -223,5 +223,5 @@ credit-card-fraud-detection/
 ## Author
 
 Ali Abu Sohiban
-Biotechnology graduate, Islamic University of Gaza.
-Currently studying data science and machine learning.
+>Biotechnology graduate, Islamic University of Gaza.
+>Currently studying data science and machine learning.
