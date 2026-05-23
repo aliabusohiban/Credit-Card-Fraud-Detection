@@ -125,7 +125,7 @@ These are not close calls. The model is certain about them.
 
 ### Do the IsolationForest Flags Make Sense?
 
-![IsolationForest Amount Distribution](assetsiforest_amount_distribution.png)
+![IsolationForest Amount Distribution](asset/iforest_amount_distribution.png)
 
 Same pattern as KMeans. Orange is flat, wide, spread from deeply negative to $10,000+.
 Blue is a spike at zero.
