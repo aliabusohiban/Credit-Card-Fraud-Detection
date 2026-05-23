@@ -225,5 +225,3 @@ credit-card-fraud-detection/
 Ali Abu Sohiban
 Biotechnology graduate, Islamic University of Gaza.
 Currently studying data science and machine learning.
-
-[GitHub](https://github.com/your-username) | [LinkedIn](https://linkedin.com/in/your-profile)
