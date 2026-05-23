@@ -70,7 +70,7 @@ Both models independently arrived at exactly 40 suspicious transactions, matchin
 After fitting 3 clusters, every transaction gets a distance score to its nearest centroid.
 Normal transactions cluster tightly at low distances. Fraudulent ones sit far out.
 
-![KMeans Distance Distribution](assets/kmeans_distance_distribution.png)
+![KMeans Distance Distribution](asset/kmeans_distance_distribution.png)
 
 The bulk of transactions fall between distances **2 and 8**.
 A tiny handful scatter out to **20, 40, even 65**. Those are the candidates.
@@ -83,7 +83,7 @@ The model does not define what fraud looks like. It finds what does not look nor
 The 99.6th percentile of distances becomes the decision boundary.
 Anything above it gets flagged.
 
-![KMeans Anomaly Threshold](assets/kmeans_anomaly_threshold.png)
+![KMeans Anomaly Threshold](asset/kmeans_anomaly_threshold.png)
 
 The threshold lands at **20.91**.
 White area: 9,960 normal transactions.
@@ -96,7 +96,7 @@ Some sit just above the line (borderline). Others stretch past distance 60 (no a
 
 A model flagging random transactions is useless. This checks whether the flags make sense.
 
-![KMeans Amount Distribution](assets/kmeans_amount_distribution.png)
+![KMeans Amount Distribution](asset/kmeans_amount_distribution.png)
 
 The blue peak (normal) is a near-vertical spike at $0. Everyday spending.
 The orange area (flagged) is flat and spread from **negative values to past $10,000**.
@@ -114,7 +114,7 @@ Two signals worth noting:
 IsolationForest builds hundreds of random trees and measures how quickly each transaction
 can be isolated from the rest. Unusual transactions isolate fast and get low (negative) scores.
 
-![IsolationForest Score Distribution](assets/iforest_score_distribution.png)
+![IsolationForest Score Distribution](asset/iforest_score_distribution.png)
 
 Nearly all 10,000 transactions pile up between **+0.12 and +0.29** on the right.
 Left of the red line (score = 0): roughly 40 transactions.
@@ -125,7 +125,7 @@ These are not close calls. The model is certain about them.
 
 ### Do the IsolationForest Flags Make Sense?
 
-![IsolationForest Amount Distribution](assets/iforest_amount_distribution.png)
+![IsolationForest Amount Distribution](assetsiforest_amount_distribution.png)
 
 Same pattern as KMeans. Orange is flat, wide, spread from deeply negative to $10,000+.
 Blue is a spike at zero.
